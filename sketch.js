@@ -12,13 +12,16 @@ function setup() {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(leafletMap);
 
-    // マーカーを追加　２、３、４に２つ、スポーツ、ミレニアムセンター、
+    // マーカーを追加
     const markers = [
-      {coords:　[35.6571232,140.0430484], popup: "<img src='３号館.png' width='200'><br>３号館" },
-        { coords: [35.6581119,140.0425235], popup: '４号館' },
-        { coords: [35.657310, 140.043290], popup: '２号館' },
-      {coords: [35.65537985430815, 140.0436159350883], popup: '体育館'},
-        ];
+        { coords: [35.6571232, 140.0430484], popup: "<img src='３号館.png' width='200'><br>３号館" },
+        { coords: [35.65803434073385, 140.04290957812046], popup: "<img src='４号館１階.png' width='200'><br>４号館１階" },
+        { coords: [35.65786627983767, 140.0430474722702], popup: "<img src='４号館２階.png' width='200'><br>４号館２階" },
+        { coords: [35.657310, 140.043290], popup: "<img src='２号館.png' width='200'><br>2号館" },
+        { coords: [35.65537985430815, 140.0436159350883], popup: "<img src='体育館.png' width='200'><br>体育館" },
+        { coords: [35.65618565139854, 140.04461355588595], popup: "<img src='ミレニアムホール.png' width='200'><br>ミレニアムホール" },
+        { coords: [35.65675386781967, 140.04120067567973], popup: "<img src='７号館.png' width='200'><br>７号館" },
+    ];
 
     markers.forEach(markerData => {
         const marker = L.marker(markerData.coords).addTo(leafletMap);
